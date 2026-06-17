@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main(){
+    int i,j,r,c;
+    printf("enter the row");
+    scanf("%d",&r);
+     for(i=1;i<=r;i++){
+         for(j=0;j<i;j++){
+        printf("*");
+            }
+            printf("\n");
+        }
+}
