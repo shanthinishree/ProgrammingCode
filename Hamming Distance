@@ -2,6 +2,7 @@
 
 int hammingDistance(int x, int y) {
     int xor_result = x ^ y;
+    
     int count = 0;
         while (xor_result > 0) {
         count += xor_result & 1;
@@ -11,8 +12,8 @@ int hammingDistance(int x, int y) {
     return count;
 }
 int main() {
-    int input1 = 5;
-    int input2 = 7;
+    int input1,input2;
+    scanf("%d%d",&input1,&input2);
     printf("%d\n", hammingDistance(input1, input2)); 
     return 0;
 }
