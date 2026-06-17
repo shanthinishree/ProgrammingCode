@@ -1,3 +1,4 @@
+Write code for swapping two variables without using 3rd variable.
 x=input("enter x")
 y=input("enter y")
 print("before swapping:",x,y)
