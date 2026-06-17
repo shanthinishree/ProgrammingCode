@@ -1,0 +1,30 @@
+#include <stdio.h>
+void CustomCaesarCipher(int key, char message[]) {
+    int i = 0;
+    while (message[i] != '\0') {
+        char ch = message[i];
+        if (ch >= 'A' && ch <= 'Z') {
+            message[i] = ((ch - 'A' + key) % 26) + 'A';
+        }
+        else if (ch >= 'a' && ch <= 'z') {
+            message[i] = ((ch - 'a' + key) % 26) + 'a';
+        }
+
+        i++; 
+    }
+}
+int main() {
+    char plaintext[100];
+    int key;
+    printf("Enter your PlainText: ");
+    fgets(plaintext, sizeof(plaintext), stdin);
+    printf("Enter the Key: ");
+    scanf("%d", &key);
+    key = key % 26;
+    if (key < 0) {
+        key += 26;
+    }
+    CustomCaesarCipher(key, plaintext);
+    printf("The encrypted Text is: %s", plaintext);
+    return 0;
+}
