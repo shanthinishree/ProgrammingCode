@@ -1,3 +1,10 @@
+Write a program to print pattern of numbers as below:
+1
+121
+12321
+
+
+
 #include<stdio.h>
 int main(){
     int i,j,r,c;
