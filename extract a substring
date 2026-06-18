@@ -1,0 +1,29 @@
+ program to extract a given substring from a complete string in c
+
+
+#include <stdio.h>
+
+int main() {
+    char text[100];
+    char result[100];
+    int start, length, i;
+
+    printf("Enter a word or text: ");
+    scanf("%s", text);
+
+    printf("Enter start index (0 is the first letter): ");
+    scanf("%d", &start);
+
+    printf("Enter how many letters to copy: ");
+    scanf("%d", &length);
+
+    for (i = 0; i < length; i++) {
+        result[i] = text[start + i];
+    }
+  
+    result[i] = '\0'; 
+
+    printf("Result: %s\n", result); 
+
+    return 0;
+}
