@@ -1,0 +1,16 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter text: ");
+        String input = scanner.nextLine();
+        System.out.print("Result: ");
+        for (int i = 0; i < input.length(); i++) {
+            char current = input.charAt(i);
+            if (input.indexOf(current) == i) {
+                System.out.print(current);
+            }
+        }
+        System.out.println();
+    }
+}
