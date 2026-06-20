@@ -1,0 +1,38 @@
+ Employee Salary Calculator Using Static Methods
+Create a Java class named SalaryCalculator with static methods to calculate gross salary, deductions, and net salary. Call these methods without creating an object.
+Sample Input
+Basic Salary = 30000
+Allowance = 5000
+Deduction = 2000
+Sample Output
+Gross Salary = 35000
+Net Salary = 33000
+
+
+
+
+import java.util.*;
+class Main
+{
+    static int getgross(int basic,int allow)
+    {
+        return basic+allow;
+    }
+    static int getnet(int gross,int deduct)
+    {
+        return gross-deduct;
+    }
+
+    public static void main(String args[])
+    {
+        int basic=30000;
+        int allow=5000;
+        int deduct=2000;
+        int grosssalary= Main.getgross(basic,allow);
+        int netsalary= Main.getnet(grosssalary,deduct);
+        System.out.println("Gross salary"+grosssalary);
+        System.out.println("Netsalary"+netsalary);
+    }
+    
+}
+   
